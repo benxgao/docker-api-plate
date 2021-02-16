@@ -1,21 +1,18 @@
 import prettierRules from './.prettierrc.json';
 
 module.exports = {
-  env: { jest: true, browser: true },
+  env: { jest: true, node: true },
   extends: [
     'eslint:recommended'
   ],
   plugins: ['jest', 'prettier'],
   parserOptions: {
-    parser: 'babel-eslint', // the typescript-parser for eslint, instead of tslint
-    sourceType: 'module', // allow the use of imports statements
-    ecmaVersion: 2020, // allow the parsing of modern ecmascript
-    ecmaFeatures: {
-      jsx: true
-    }
+    parser: 'babel-eslint',
+    sourceType: 'module',
+    ecmaVersion: 2020,
   },
   settings: {
-    'import/extensions': ['.js', 'jsx']
+    'import/extensions': ['.js']
   },
   rules: {
     'prettier/prettier': ['error', prettierRules],
