@@ -1,14 +1,16 @@
-version: "3"
+version: "3.2"
+
 services:
   app:
     container_name: app
-    # image: ./Dockerfile
     restart: always
     build: .
     ports:
-      "8080:8080"
-    links:
-      - mongo
+      - "48080:8080"
+    # links:
+    #   - mongo
+    networks: 
+      - docker-api-plate
   # mongo:
   #   container_name: mongo
   #   image: mongo
@@ -16,3 +18,10 @@ services:
   #     - ./data:/data/db
   #   ports:
   #     - "27017:27017"
+  #   networks: 
+  #     - docker-api-plate
+
+networks: 
+  docker-api-plate:
+    driver: 
+      bridge
