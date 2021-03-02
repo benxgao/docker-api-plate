@@ -3,6 +3,7 @@
 ## Database
 
 - [ ] Set up Mongo ops process;
+- [ ] Create Mongo init script; 
 - [ ] Set up Mongoose;
 - [ ] Set up .env config;
 - [ ] Set up passport.js;
